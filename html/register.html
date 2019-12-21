@@ -1,0 +1,68 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<title>清风阁-用户注册！</title>
+		<link rel="stylesheet" type="text/css" href="../css/remain.css" />
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<div id="register">
+		<p id="form-tittle" style="font-size: 33px;color: #555; text-align: center; margin-top: 28px; padding-top: 28px;">用户注册</p>
+		<form id="form1" method="get" action="register.asp">
+			<div class="a" style="margin-top: 50px;"><label>账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</label><input type="text"
+				 name="account" id="account" value="0121803490215" placeholder="请输入学号"/></div>
+			<div class="a"> <label>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱</label><input type="email" name="email" id="email" placeholder="请输入邮箱账号"></div>
+			<div class="a"><label>设置密码</label><input type="password" name="password" id="password" placeholder="请输入密码"/></div>
+			<div class="a"><label>确认密码</label><input type="password" name="" id="" placeholder="请确认密码"/></div>
+			<div class="a"><label>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</label>
+				<div id="gender">
+					男<input type="radio" name="gender" value="1" id="man" checked="checked">
+					女 <input type="radio" name="gender" value="2"  id="women">
+				</div>
+			</div>
+			<div class="a"><label>爱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好</label>
+				<div id="hb" >
+					读书<input type="checkbox" name="favor" value="读书">
+					足球 <input type="checkbox" name="favor" value="足球">
+					写代码 <input type="checkbox" name="favor" value="写代码">
+				</div>
+			</div>
+			<div class="a">
+				<label>专业班级</label>
+				<select name="major">
+					<option value=" ">--请选择--</option>
+					<option value="信管1801">信管1801</option>
+					<option value="信管1802">信管1802</option>
+					<option value="信管1803">信管1803</option>
+				</select>
+			</div>
+			<div class="a"><label>个人头像</label></div>
+			<div id="preview" style="width: 180px;height:180px; border:0px; background-color: rgb(248,248,248); background-image: url(../img/upload.png) ; background-position: center;">
+				<input type="file" accept="image/*" id="file" value="" ;" />
+				<!-- <img src="img/1.png" style="z-index:0;" > -->
+			</div>
+			<script type="text/javascript">
+				var preview = document.querySelector('#preview');
+				var eleFile = document.querySelector('#file');
+				eleFile.addEventListener('change', function() {
+					var file = this.files[0];
+					// 确认选择的文件是图片                
+					if (file.type.indexOf("image") == 0) {
+						var reader = new FileReader();
+						reader.readAsDataURL(file);
+						reader.onload = function(e) {
+							// 图片base64化
+							var newUrl = this.result;
+							preview.style.backgroundImage = 'url(' + newUrl + ')';
+						};
+					}
+				});
+			</script>
+			<br>
+			<div class="bt"><input type="submit" action="#" id="bt1" name="" value="提 交" />
+			<input type="reset" id="bt2" name="" value="重 置" /></div>
+		</form>
+	</div>
+	</body>
+</html>

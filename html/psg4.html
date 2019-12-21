@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; Charset=gb2312">
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>清风阁 - 文章专栏 - Git操作指南！</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <!--Layui-->
+    <link href="../plug/layui/css/layui.css" rel="stylesheet" />
+    <!--font-awesome-->
+    <link href="../plug/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <!--全局样式表-->
+    <link href="../css/global.css" rel="stylesheet" />
+    <!-- 比较好用的代码着色插件 -->
+    <link href="../css/prettify.css" rel="stylesheet" />
+    <!-- 本页样式表 -->
+    <link href="../css/psg.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- 导航 -->
+    <nav class="blog-nav layui-header">
+        <div class="blog-container"> 
+			<!--登录按钮-->
+			<div id="login" style="position: absolute; right: 20px; top: 22px;">
+				<a href="" target="_blank" style="color: rgb(194,194,194);font-size: 15px; "><img src="../img/login.png" style="height: 30px "></a>
+			</div>
+            <div id="logo">
+            	<a href="home.html"><img src="../img/logo.png" id="imlogo" href="home.html" style="height: 55px; padding-top: 3px;"></a>
+            </div>
+            <!-- 导航菜单 -->
+            <ul class="layui-nav" lay-filter="nav">
+                <li class="layui-nav-item">
+                    <a href="home.html"><i class="fa fa-home fa-fw"></i>&nbsp;网站首页</a>
+                </li>
+                <li class="layui-nav-item  layui-this">
+                    <a href="article.html"><i class="fa fa-file-text fa-fw"></i>&nbsp;文章专栏</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="resource.html"><i class="fa fa-tags fa-fw"></i>&nbsp;资源分享</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="footprint.html"><i class="fa fa-hourglass-half fa-fw"></i>&nbsp;留下脚印</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="about.html"><i class="fa fa-info fa-fw"></i>&nbsp;关于本站</a>
+                </li>
+            </ul>
+			<!-- <div id="login" style="position: absolute; right: 20px; top: 20px;">
+				<a href="register.html" target="_blank" style="color: rgb(174,194,161);font-size: 17px; ">登陆&nbsp;|&nbsp;注册</a>
+			</div> -->
+            <!-- 手机和平板的导航开关 -->
+            <a class="blog-navicon" href="javascript:;">
+                <i class="fa fa-navicon"></i>
+            </a>
+        </div>
+    </nav>
+    <!-- 主体（一般只改变这里的内容） -->
+    <div class="blog-body">
+        <div class="blog-container">
+            <blockquote class="layui-elem-quote sitemap layui-breadcrumb shadow">
+                <a href="home.html" title="网站首页">网站首页</a>
+                <a href="article.html" title="文章专栏">文章专栏</a>
+                <a><cite>Git操作指南</cite></a>
+            </blockquote>
+            <div class="blog-main">
+                <div class="blog-main-left">
+                    <!-- 文章内容（使用Kingeditor富文本编辑器发表的） -->
+                    <div class="article-detail shadow">
+                        <div class="article-detail-title">
+                            Git操作指南！
+                        </div>
+                        <div class="article-detail-info">
+                            <span>编辑时间：2019/12/9 </span>
+                            <span>作者：Lin</span>
+                            <span>浏览量：1</span>
+                        </div>
+                        <div class="article-detail-content">
+                           
+                            <div style="text-align:center;">
+                                &nbsp; &nbsp; <span style="color:#EE33EE;">前言</span>：啥？你连Git都不知道是什么？
+                            </div>
+                            <hr />
+                            <p>
+                                <br />
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;git 是一个分布式版本控制软件，最初由林纳斯·托瓦兹创作，于 2005 年以 GPL 发布。最初目的是为更好地管理 Linux 
+								内核开发而设计。应注意的是，这与 GNU Interactive Tools 有所不同。 git 最初的开发动力来自于 BitKeeper 和 Monotone。
+                            </p>
+							<p>
+							    &nbsp;&nbsp;&nbsp;&nbsp;git 最初的开发动力来自于 BitKeeper 和 Monotone。git 最初只是作为一个可以被其他前端（比如 Cogito 或 Stgit）
+								包装的后端而开发的，但后来 git 内核已经成熟到可以独立地用作版本控制。很多著名的软件都使用 git 进行版本控制，其中包括 Linux 内核、X.Org 服务器和 OLPC 内核等项目的开发流程。
+							</p>
+							<br>
+							<h1 style="font-size: 20px;">主要功能</h1>
+							<br>
+							<p>
+							    &nbsp;&nbsp;&nbsp;&nbsp;git 是用于 Linux 内核开发的版本控制工具。与 CVS、Subversion 一类的集中式版本控制工具不同，它采用了分布式版本库的作法，不需要服务器端软件，就可以运作版本控制，使得源代码的发布和
+							交流极其方便。git 的速度很快，这对于诸如 Linux 内核这样的大项目来说自然很重要。git 最为出色的是它的合并追踪（merge tracing）能力。
+							</p>
+							<p>
+							    &nbsp;&nbsp;<img src="../img-psg/psg4.1.png"  style="width: 550px; text-align: center;">
+							</p>
+                            
+							<p>
+							    &nbsp;&nbsp;&nbsp;&nbsp;Git教程很多，此篇文字仅介绍Git，有兴趣的同学建议自主学习，相关工具包如下：
+							</p>
+							<br>
+                            <p>
+                                &nbsp; &nbsp; <a href="https://www.lanzous.com/i82tnah" target="_blank">下载链接：https://www.lanzous.com/i82tnah</a>
+                            </p>
+						
+                            <br>
+                            <hr />
+                            &nbsp; &nbsp; 出自：清风阁
+                            <p>
+                                &nbsp; &nbsp; 地址：<a href="http://www.qingfengloft.cn" target="_blank">www.qingfengloft.cn</a>
+                            </p>
+                            <p>
+                                &nbsp; &nbsp; 转载请注明出处！<img src="../img/logo-r.png"  height="20px" border="0" alt="" />
+                            </p>
+                            <p>
+                                <br />
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 评论区域 -->
+                    <div class="blog-module shadow" style="box-shadow: 0 1px 8px #a6a6a6;">
+                        <fieldset class="layui-elem-field layui-field-title" style="margin-bottom:0">
+                            <legend>来说两句吧</legend>
+                            <div class="layui-field-box">
+                                <form class="layui-form blog-editor" action="">
+                                    <div class="layui-form-item">
+                                        <textarea name="editorContent" lay-verify="content" id="remarkEditor" placeholder="请输入内容" class="layui-textarea layui-hide"></textarea>
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <button class="layui-btn" lay-submit="formRemark" lay-filter="formRemark">提交评论</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </fieldset>
+                        <div class="blog-module-title">最新评论</div>
+                        <ul class="blog-comment">
+                            <li>
+                                <div class="comment-parent">
+                                    <img src="../img/header.jpg" alt="Lin" />
+                                    <div class="info">
+                                        <span class="username">Lin</span>
+                                        <span class="time">2019-12-16 18:46:06</span>
+                                    </div>
+                                    <div class="content">
+                                        欢迎大家留言讨论！
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="blog-main-right">
+                    <!--右边悬浮 平板或手机设备显示-->
+                    <div class="category-toggle"><i class="fa fa-chevron-left"></i></div><!--这个div位置不能改，否则需要添加一个div来代替它或者修改样式表-->
+                    <div class="article-category shadow">
+						<!-- 点击分类后的页面和artile.html页面一样，只是数据是某一类别的 -->
+						<div class="article-category-title">分类导航</div>
+						<a href="">资源集</a>
+						<a href="">自创集</a>
+						<a href="">心得篇</a>
+						<a href="">杂文随笔</a>
+						<div class="clear"></div>                 
+                    </div>
+                    <div class="blog-module shadow">
+                        <div class="blog-module-title">作者推荐</div>
+                            <ul class="fa-ul blog-module-ul">
+                                <li><i class="fa-li fa fa-hand-o-right"></i><a href="psg1.html">百度网盘破解限速</a></li>
+                                <li><i class="fa-li fa fa-hand-o-right"></i><a href="psg2.html">思维导图工具——XMind</a></li>
+                                <li><i class="fa-li fa fa-hand-o-right"></i><a href="psg3.html">史上最强笔记软件——myBase</a></li>
+                                <li><i class="fa-li fa fa-hand-o-right"></i><a href="psg4.html">Git操作指南</a></li>
+                                <li><i class="fa-li fa fa-hand-o-right"></i><a href="psg5.html">教务处抢课脚本及使用方法</a></li>
+                            </ul>                   
+                    </div>                   
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+   <!-- 底部 -->
+   <footer class="blog-footer">
+   	<p><span>Copyright</span><span>&copy;</span><span>2019</span><a href="http://www.lyblogs.cn">清风阁</a><span>Design By
+   			Lin</span></p>
+   	<p><a href="" target="_blank"></a></p>
+   </footer>
+    <!--侧边导航-->
+    <ul class="layui-nav layui-nav-tree layui-nav-side blog-nav-left layui-hide" lay-filter="nav">
+        <li class="layui-nav-item">
+            <a href="home.html"><i class="fa fa-home fa-fw"></i>&nbsp;网站首页</a>
+        </li>
+        <li class="layui-nav-item layui-this">
+            <a href="article.html"><i class="fa fa-file-text fa-fw"></i>&nbsp;文章专栏</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="resource.html"><i class="fa fa-tags fa-fw"></i>&nbsp;资源分享</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="footprint.html"><i class="fa fa-road fa-fw"></i>&nbsp;留下脚印</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="about.html"><i class="fa fa-info fa-fw"></i>&nbsp;关于本站</a>
+        </li>
+    </ul>
+    <!--分享窗体-->
+    <div class="blog-share layui-hide">
+        <div class="blog-share-body">
+            <div style="width: 200px;height:100%;">
+                <div class="bdsharebuttonbox">
+                    <a class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                    <a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                    <a class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                    <a class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--遮罩-->
+    <div class="blog-mask animated layui-hide"></div>
+    <!-- layui.js -->
+    <script src="../plug/layui/layui.js"></script>
+    <!-- 自定义全局脚本 -->
+    <script src="../js/global.js"></script>
+    <!-- 比较好用的代码着色插件 -->
+    <script src="../js/prettify.js"></script>
+    <!-- 本页脚本 -->
+    <script src="../js/psg.js"></script>
+</body>
+</html>
